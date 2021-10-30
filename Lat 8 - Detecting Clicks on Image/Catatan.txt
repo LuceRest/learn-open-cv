@@ -1,0 +1,4 @@
+- cv2.EVENT_LBUTTONDOWN	-> Menunjukkan left klik pada mouse ditekan
+
+- setMouseCallBack()	~> Berfungsi untuk menjalankan suatu function apabila mouse diklik / untuk mengatur pengendali mouse untuk window tertentu.
+- setMouseCallBack(<nama window>, <function yg akan dijalankan>)

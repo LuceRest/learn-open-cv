@@ -1,0 +1,24 @@
+- cv2.COLOR_BGR2HSV	~> Berfungsi untuk mengubah warna gambar menjadi format HSV.
+
+- cv2.namedWindow()	~> Berfungsi untuk membuat suatu window yg dapat digunakan sebagai tempat untuk gambar dan trackbar.
+- cv2.namedWindow("<nama window>")
+
+- cv2.resizeWindow()	~> Berfungsi untuk meresize ukuran suatu window.
+- cv2.resizeWindow("<nama window yg ingin diresize>", <width / lebar>, <height / tinggi>)
+
+- cv2.createTrackbar()	~> Berfungsi untuk membuat suatu trackbar / slider pada window yg telah dibuat.
+- cv2.createTrackbar("<nama trackbar>", "<nama window yg telah dibuat>", <nilai slider>, <nilai maksimal slider>, <function yg akan dijalankan>)
+
+- cv2.getTrakcbarPos()	~> Berfungsi untuk mengambil nilai terkini dari suatu trackbar / untuk mengembalikan posisi saat terkini pada suatu trackbar.
+- cv2.getTrackbarPos("<nama trackbar>", "<nama window pada trackbar>")
+
+- cv2.inRange()		~> Berfungsi untuk memeriksa apakah suatu nilai terletak di antara dua array lainnya.
+- cv2.inRange(<sumber gambar yg telah dibaca / input array>, <array batas bawah>, <array batas atas>)
+
+- cv2.bitwise_and()	~> Berfungsi untuk menghitung konjungsi bit-wise per element dari dua array atau array dan skalar.
+- cv2.bitwise_and(<sumber gambar 1 / input array 1>, <sumber gambar 2 / input array>, mask = <nilai dari element yg akan diubah>)
+
+- np.hstack()		~> Berfungsi untuk menumpuk urutan array input secara horizontal untuk membuat array tunggal.
+- np.hstack(<input array>) 
+- np.hstack()		~> Berfungsi juga untuk menggabungkan 2 gambar / lebih secara horizontal.
+- np.hstack([<gambar 1>, <gambar 2>]) 

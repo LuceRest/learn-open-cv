@@ -1,0 +1,7 @@
+- cv2.imread().shape	~> Berfungsi untuk mengetahui dimensi dari sebuah gambar (tinggi, lebar, channels).
+
+- cv2.imread()[<tinggi pixel awal>:<tinggi pixel akhir>, <lebar pixel awal>:<lebar pixel akhir>]
+    ~> Berfungsi untuk mengcrop suatu gambar berdasarkan ukuran pixel yg ingin ditampilkan.
+
+- cv2.resize()	        ~> Berfungsi untuk meresize suatu gambar yg telah dibaca.
+- cv2.resize("<gambar>", (<lebar/width>, <tinggi/height>))

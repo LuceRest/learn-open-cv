@@ -1,0 +1,210 @@
+Latihan 2 :
+
+- cv2.imread()		                        ~> Berfungsi untuk membaca suatu gambar input.
+- cv2.imread("<lokasi gambar>")
+
+- cv2.imshow()		                        ~> Berfungsi untuk menampilkan gambar yg telah dibaca dengan imread().
+- cv2.imshow("<nama window", <gambar yg ingin ditampilkan>)
+
+- cv2.waitKey()		                        ~> Berfungsi untuk memberi delay terhadap penampilan gambar.
+- cv2.waitKey(<lama delay [ms]>)
+- cv2.waitKey(0)				~> Berfungsi untuk menampilkan gambar selama user tidak menutupnya.
+
+- cv2.VideoCapture()	                    	~> Berfungsi untuk membaca suatu video input atau urutan gambar input.
+- cv2.VideoCapture("<lokasi video>")
+- cv2.VideoCapture(0)	                    	~> Berfungsi untuk membaca webcam.
+
+- cv2.VideoCapture().read()	                ~> Berfungsi untuk membaca suatu video perframe (mereturn boolean & gambar perframe).
+- <nama variable boolean>, <nama variable perframe> = cv2.VideoCapture().read()
+
+- cv2.VideoCapture().set(3, <lebar frame>)	~> Berfunsi untuk mengatur lebar frame.
+
+- cv2.VideoCapture().set(4, <tinggi frame>)	~> Berfunsi untuk mengatur tinggi frame.
+
+- cv2.resize()		                        ~> Berfungsi untuk mengatur ukuran gambar yg telah dibaca.
+- cv2.resize(<gambar yg ingin diresize>, (<lebar frame>, <tinggi frame>))
+
+
+
+Latihan 3 :
+
+- cv2.imread("<lokasi gambar>", 0) 	~> Berfungsi untuk membaca suatu gambar input dan memberinya efek grayscale (abu-abu).
+
+- cv2.cvtColor()		      	~> Berfungsi untuk mengubah warna dari suatu gambar.
+- cv2.cvtColor(<gambar yg dibaca>, <warna baru>)
+
+- cv2.COLOR_BGR2GRAY	             	~> Berfungsi untuk memberi warna abu-abu.
+
+- cv2.GaussianBlur()		        ~> Berfungsi untuk memberi efek blur pada gambar yg telah dibaca.
+- cv2.GaussianBlur(<gambar yg ingin diberi efek blur>, (<besar blur [angka ganjil], <besar blur [angka ganjil]), 0)
+
+- cv2.Canny()				~> Berfungsi untuk memberi efek canny pada gambar yg telah dibaca.
+- cv2.Canny(<gambar yg ingin diberi efek canny>, 100, 100)
+- cv2.Canny(<gambar yg ingin diberi efek canny>, <lower threshold>, <upper threshold>)
+
+- cv2.dilate()				~> Berfungsi untuk memberi filter morfologi pelebaran pada gambar yg telah dibaca.
+- cv2.dilate(<sumber gambar>, <kernel>, <iterations>) 
+    - kernel = numpy.ones((5, 5), numpy.uint8)
+
+- cv2.erode()				~> Berfungsi untuk memberi filter morfologi penipisan pada gambar yg telah dibaca.
+- cv2.erode(<sumber gambar>, <kernel>, <iterations>) 
+    - kernel = numpy.ones((5, 5), numpy.uint8)
+
+
+
+Latihan 4 :
+
+- cv2.imread().shape	~> Berfungsi untuk mengetahui dimensi dari sebuah gambar (tinggi, lebar, channels).
+
+- cv2.imread()[<tinggi pixel awal>:<tinggi pixel akhir>, <lebar pixel awal>:<lebar pixel akhir>]
+    ~> Berfungsi untuk mengcrop suatu gambar berdasarkan ukuran pixel yg ingin ditampilkan.
+
+- cv2.resize()	        ~> Berfungsi untuk meresize suatu gambar yg telah dibaca.
+- cv2.resize("<gambar>", (<lebar/width>, <tinggi/height>))
+
+
+
+Latihan 5 :
+
+- <variable gambar>[:] = <warna [rgb]>
+    ~> Berfungsi untuk memberi warna dalam rgb pada suatu gambar.
+
+- cv2.line()		~> Berfungsi untuk membuat garis pada suatu gambar.
+- cv2.line(<gambar>, (<lokasi x garis awal>, <lokasi y garis awal>), (<lokasi x garis akhir>, <lokasi y garis akhir>), (<warna [rgb]>), <ketebalan>)
+
+- cv2.rectangle()	~> Berfungsi untuk membuat suatu rectangle.
+- cv2.rectangle(<gambar>, (<lokasi x garis awal>, <lokasi y garis awal>), (<lokasi x garis akhir>, <lokasi y garis akhir>), (<warna [rgb]>), <ketebalan>)
+
+- cv2.FILLED	  	~> Berfungsi untuk memberi warna penuh pada suatu rectangle di suatu gambar.
+
+- cv2.circle()	  	~> Berfungsi untuk membuat suatu lingkaran pada suatu gambar.
+- cv2.circle(<gambar>, (<lokasi x titik pusat>, <lokasi y titik pusat>), <jari-jari [radius]>,  (<warna [rgb]>), <ketebalan>)
+
+- cv2.putText()	    	~> Berfungsi untuk memberi text pada suatu gambar.
+- cv2.putText(<gambar>, "<text>", (<lokasi x awal text>, <lokasi y awal text>), <jenis font [cv2.FONT_]>, <ukuran text>, (<warna [rgb]>), <ketebalan>)
+
+
+
+Latihan 7 :
+
+- cv2.getPerspectiveTrasnform()	~> Berfungsi untuk mengambil letak dari gambar dalam bentuk matriks pada suatu gambar dan mengubahnya menjadi gambar dengan letak matriks yg baru.
+- cv2.getPerspectiveTrasnform(<letak matriks lama>, <letak matriks baru>)
+
+- cv2.warpPerspective()	        ~> Berfungsi untuk membuat gambar baru dari matriks yg didapat dari function cv2.getPerspectiveTrasnform().
+- cv2.warpPerspective(<gambar lama>, <matriks baru>, (<lebar gambar baru>, <tinggi gambar baru>))
+
+
+
+Latihan 8 :
+
+- cv2.EVENT_LBUTTONDOWN	-> Menunjukkan left klik pada mouse ditekan
+
+- setMouseCallBack()	~> Berfungsi untuk menjalankan suatu function apabila mouse diklik / untuk mengatur pengendali mouse untuk window tertentu.
+- setMouseCallBack(<nama window>, <function yg akan dijalankan>)
+
+
+
+Latihan 9 :
+
+- cv2.COLOR_BGR2HSV	~> Berfungsi untuk mengubah warna gambar menjadi format HSV.
+
+- cv2.namedWindow()	~> Berfungsi untuk membuat suatu window yg dapat digunakan sebagai tempat untuk gambar dan trackbar.
+- cv2.namedWindow("<nama window>")
+
+- cv2.resizeWindow()	~> Berfungsi untuk meresize ukuran suatu window.
+- cv2.resizeWindow("<nama window yg ingin diresize>", <width / lebar>, <height / tinggi>)
+
+- cv2.createTrackbar()	~> Berfungsi untuk membuat suatu trackbar / slider pada window yg telah dibuat.
+- cv2.createTrackbar("<nama trackbar>", "<nama window yg telah dibuat>", <nilai slider>, <nilai maksimal slider>, <function yg akan dijalankan>)
+
+- cv2.getTrakcbarPos()	~> Berfungsi untuk mengambil nilai terkini dari suatu trackbar / untuk mengembalikan posisi saat terkini pada suatu trackbar.
+- cv2.getTrackbarPos("<nama trackbar>", "<nama window pada trackbar>")
+
+- cv2.inRange()		~> Berfungsi untuk memeriksa apakah suatu nilai terletak di antara dua array lainnya.
+- cv2.inRange(<sumber gambar yg telah dibaca / input array>, <array batas bawah>, <array batas atas>)
+
+- cv2.bitwise_and()	~> Berfungsi untuk menghitung konjungsi bit-wise per element dari dua array atau array dan skalar.
+- cv2.bitwise_and(<sumber gambar 1 / input array 1>, <sumber gambar 2 / input array>, mask = <nilai dari element yg akan diubah>)
+
+- np.hstack()		~> Berfungsi untuk menumpuk urutan array input secara horizontal untuk membuat array tunggal.
+- np.hstack(<input array>) 
+- np.hstack()		~> Berfungsi juga untuk menggabungkan 2 gambar / lebih secara horizontal.
+- np.hstack([<gambar 1>, <gambar 2>]) 
+
+
+
+Latihan 10 :
+
+- cv2.GaussianBlur()    ~> Berfungsi untuk memblur gambar menggunakan filter Gaussian.
+- cv2.GaussianBlur(<sumber gambar yg telah dibaca>, (<kernel size sumbu x>, <kernel size sumbu y>), <ketebalan>)
+
+- cv2.COLOR_BGR2GRAY	~> Berfungsi untuk memberi warna abu-abu.
+
+- cv2.Canny()		~> Berfungsi untuk menemukan tepi / ujunng dalam gambar menggunakan algoritma Canny.
+- cv2.Canny(<sumber gambar yg telah dibaca>, <threshold1>, <threshold2>)
+
+- cv2.dilate()		~> Berfungsi untuk melebarkan gambar dengan menggunakan elemen penataan tertentu.
+- cv2.dilate(<sumber gambar yg telah dibaca>, <kernel / array penataan yang digunakan untuk dilatasi>, iterations=<berapa kali dilatasi diterapkan [int]>)
+
+- cv2.findContours()	~> Berfungsi untuk mencari kontur (garis bentuk) pada suatu gambar dan akan mereturn contours dan hierarchy dari gambar.
+
+- cv2.findContours(<sumber gambar yg telah dibaca>, <contours [OutputArrayOfArrays]>, <hierarchy [OutputArray]>)
+
+- cv2.RETR_EXTERNAL	~> Berfungsi untuk mengambil kontur luar yang ekstrem.
+    - hierarchy[i][2]=hierarchy[i][3]=-1
+
+- cv2.CHAIN_APPROX_NONE	~> Berfungsi untuk benar-benar menyimpan semua titik kontur.
+    - Artinya, setiap 2 titik berikutnya (x1,y1) dan (x2,y2) dari kontur akan menjadi tetangga horizontal, vertikal atau diagonal, yaitu, max(abs(x1-x2),abs(y2-y1)) == 1.
+
+- cv2.drawContours()	~> Berfungsi untuk menggambar garis kontur.
+- cv2.drawContours(<sumber gambar yg akan digambari garis>, <contours>, <contourIdx>, <warna>, <ketebalan>)
+    - contours		-> Semua kontur input. Setiap kontur disimpan sebagai vektor titik.
+    - contourIdx	-> Parameter yang menunjukkan kontur untuk menggambar. Jika negatif, semua kontur digambar.
+    - color		-> (r, g, b)
+
+- .copy()		~> Berfungsi untuk mengcopy suatu gambar.
+- <gambar yg ingin dicopy>.copy()
+
+- cv2.contourArea()	~> Berfungsi untuk menghitung luas suatu kontur.
+- cv2.contourArea(<contour yg ingin dihitung luasnya>)
+
+- cv2.arcLength()	~> Berfungsi untuk menghitung keliling kontur dari panjang kurva.
+- cv2.arcLength(<contour yg ingin dihitung kelilingnya>, <closed or not [bool]>)
+    - closed		-> Menunjukkan apakah kurva ditutup atau tidak.
+
+- cv2.approxPolyDP()	~> Berfungsi untuk mendekati kurva poligonal dengan presisi yang ditentukan.
+- cv2.approxPolyDP(<contour / curve>, <approxCurve>, <closed or not [bool]>)
+    - approxCurve	-> Hasil perkiraan. Jenisnya harus sesuai dengan jenis kurva input.
+    - closed		-> Jika True, kurva yang didekati ditutup (simpul pertama dan terakhirnya terhubung). Jika False, itu tidak ditutup.
+
+- cv2.boundingRect()    ~> Berfungsi untuk mengembalikan persegi panjang integer atas - kanan, minimal yang berisi persegi panjang yang diputar
+- cv2.boundingRect(<array>)
+
+- cv2.rectangle()	~> Berfungsi untuk menggambar persegi panjang atas - kanan yang sederhana, tebal, atau filled pada suatu gambar.
+- cv2.rectangle(<sumber gambar>, <point 1>, <point 2>, <warna>, <ketebalan>)
+    - point 1	        -> Titik sudut persegi panjang.
+    - point 2	        -> Titik sudut persegi panjang yang berlawanan dengan point 1.
+    - color	        -> (r, g, b)
+
+- cv2.putText()	        ~> Berfungsi untuk menggambar string teks pada suatu gambar.
+- cv2.putText(<sumber gambar>, <teks [string]>, <posisi>, <jenis font>, <ukuran font>, <warna teks>, <ketebalan>)
+    - posisi	        -> Sudut kiri bawah string teks pada gambar.
+    - color		-> (r, g, b)
+
+
+
+Latihan 11 :
+
+- cv2.CascadeClassifier()	~> Berfungsi untuk memanggil haar cascade.
+- cv2.CascadeClassifier("<lokasi haar cascade>")
+
+- .detectMultiScale()		~> Berfungsi untuk mendeteksi objek dengan ukuran berbeda pada gambar input. Objek yang terdeteksi akan direturn sebagai daftar rectangle.
+- cv2.CascadeClassifier().detectMultiScale(<input gambar / input array>, <scale factor [1.1]>, <min neighbors [3]> )
+    - Scale factor	-> Parameter yang menentukan seberapa besar ukuran gambar diperkecil pada setiap skala gambar.
+    - minNeighbors	-> Parameter yang menentukan berapa banyak neighbor yang harus dimiliki setiap kandidat rectangle untuk mempertahankannya.
+
+
+
+
+
+

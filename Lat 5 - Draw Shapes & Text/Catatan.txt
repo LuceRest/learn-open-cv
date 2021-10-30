@@ -1,0 +1,16 @@
+- <variable gambar>[:] = <warna [rgb]>
+    ~> Berfungsi untuk memberi warna dalam rgb pada suatu gambar.
+
+- cv2.line()		~> Berfungsi untuk membuat garis pada suatu gambar.
+- cv2.line(<gambar>, (<lokasi x garis awal>, <lokasi y garis awal>), (<lokasi x garis akhir>, <lokasi y garis akhir>), (<warna [rgb]>), <ketebalan>)
+
+- cv2.rectangle()	~> Berfungsi untuk membuat suatu rectangle.
+- cv2.rectangle(<gambar>, (<lokasi x garis awal>, <lokasi y garis awal>), (<lokasi x garis akhir>, <lokasi y garis akhir>), (<warna [rgb]>), <ketebalan>)
+
+- cv2.FILLED	  	~> Berfungsi untuk memberi warna penuh pada suatu rectangle di suatu gambar.
+
+- cv2.circle()	  	~> Berfungsi untuk membuat suatu lingkaran pada suatu gambar.
+- cv2.circle(<gambar>, (<lokasi x titik pusat>, <lokasi y titik pusat>), <jari-jari [radius]>,  (<warna [rgb]>), <ketebalan>)
+
+- cv2.putText()	    	~> Berfungsi untuk memberi text pada suatu gambar.
+- cv2.putText(<gambar>, "<text>", (<lokasi x awal text>, <lokasi y awal text>), <jenis font [cv2.FONT_]>, <ukuran text>, (<warna [rgb]>), <ketebalan>)

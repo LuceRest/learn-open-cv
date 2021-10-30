@@ -1,0 +1,7 @@
+- cv2.CascadeClassifier()	~> Berfungsi untuk memanggil haar cascade.
+- cv2.CascadeClassifier("<lokasi haar cascade>")
+
+- .detectMultiScale()		~> Berfungsi untuk mendeteksi objek dengan ukuran berbeda pada gambar input. Objek yang terdeteksi akan direturn sebagai daftar rectangle.
+- cv2.CascadeClassifier().detectMultiScale(<input gambar / input array>, <scale factor [1.1]>, <min neighbors [3]> )
+    - Scale factor	-> Parameter yang menentukan seberapa besar ukuran gambar diperkecil pada setiap skala gambar.
+    - minNeighbors	-> Parameter yang menentukan berapa banyak neighbor yang harus dimiliki setiap kandidat rectangle untuk mempertahankannya.

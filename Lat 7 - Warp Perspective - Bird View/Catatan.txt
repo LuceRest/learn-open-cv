@@ -1,0 +1,5 @@
+- cv2.getPerspectiveTrasnform()	~> Berfungsi untuk mengambil letak dari gambar dalam bentuk matriks pada suatu gambar dan mengubahnya menjadi gambar dengan letak matriks yg baru.
+- cv2.getPerspectiveTrasnform(<letak matriks lama>, <letak matriks baru>)
+
+- cv2.warpPerspective()	        ~> Berfungsi untuk membuat gambar baru dari matriks yg didapat dari function cv2.getPerspectiveTrasnform().
+- cv2.warpPerspective(<gambar lama>, <matriks baru>, (<lebar gambar baru>, <tinggi gambar baru>))

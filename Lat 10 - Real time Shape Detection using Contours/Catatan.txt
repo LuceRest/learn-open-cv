@@ -1,0 +1,56 @@
+- cv2.GaussianBlur()    ~> Berfungsi untuk memblur gambar menggunakan filter Gaussian.
+- cv2.GaussianBlur(<sumber gambar yg telah dibaca>, (<kernel size sumbu x>, <kernel size sumbu y>), <ketebalan>)
+
+- cv2.COLOR_BGR2GRAY	~> Berfungsi untuk memberi warna abu-abu.
+
+- cv2.Canny()		~> Berfungsi untuk menemukan tepi / ujunng dalam gambar menggunakan algoritma Canny.
+- cv2.Canny(<sumber gambar yg telah dibaca>, <threshold1>, <threshold2>)
+
+- cv2.dilate()		~> Berfungsi untuk melebarkan gambar dengan menggunakan elemen penataan tertentu.
+- cv2.dilate(<sumber gambar yg telah dibaca>, <kernel / array penataan yang digunakan untuk dilatasi>, iterations=<berapa kali dilatasi diterapkan [int]>)
+
+- cv2.findContours()	~> Berfungsi untuk mencari kontur (garis bentuk) pada suatu gambar dan akan mereturn contours dan hierarchy dari gambar.
+
+- cv2.findContours(<sumber gambar yg telah dibaca>, <contours [OutputArrayOfArrays]>, <hierarchy [OutputArray]>)
+
+- cv2.RETR_EXTERNAL	~> Berfungsi untuk mengambil kontur luar yang ekstrem.
+    - hierarchy[i][2]=hierarchy[i][3]=-1
+
+- cv2.CHAIN_APPROX_NONE	~> Berfungsi untuk benar-benar menyimpan semua titik kontur.
+    - Artinya, setiap 2 titik berikutnya (x1,y1) dan (x2,y2) dari kontur akan menjadi tetangga horizontal, vertikal atau diagonal, yaitu, max(abs(x1-x2),abs(y2-y1)) == 1.
+
+- cv2.drawContours()	~> Berfungsi untuk menggambar garis kontur.
+- cv2.drawContours(<sumber gambar yg akan digambari garis>, <contours>, <contourIdx>, <warna>, <ketebalan>)
+    - contours		-> Semua kontur input. Setiap kontur disimpan sebagai vektor titik.
+    - contourIdx	-> Parameter yang menunjukkan kontur untuk menggambar. Jika negatif, semua kontur digambar.
+    - color		-> (r, g, b)
+
+- .copy()		~> Berfungsi untuk mengcopy suatu gambar.
+- <gambar yg ingin dicopy>.copy()
+
+- cv2.contourArea()	~> Berfungsi untuk menghitung luas suatu kontur.
+- cv2.contourArea(<contour yg ingin dihitung luasnya>)
+
+- cv2.arcLength()	~> Berfungsi untuk menghitung keliling kontur dari panjang kurva.
+- cv2.arcLength(<contour yg ingin dihitung kelilingnya>, <closed or not [bool]>)
+    - closed		-> Menunjukkan apakah kurva ditutup atau tidak.
+
+- cv2.approxPolyDP()	~> Berfungsi untuk mendekati kurva poligonal dengan presisi yang ditentukan.
+- cv2.approxPolyDP(<contour / curve>, <approxCurve>, <closed or not [bool]>)
+    - approxCurve	-> Hasil perkiraan. Jenisnya harus sesuai dengan jenis kurva input.
+    - closed		-> Jika True, kurva yang didekati ditutup (simpul pertama dan terakhirnya terhubung). Jika False, itu tidak ditutup.
+
+- cv2.boundingRect()    ~> Berfungsi untuk mengembalikan persegi panjang integer atas - kanan, minimal yang berisi persegi panjang yang diputar
+- cv2.boundingRect(<array>)
+
+- cv2.rectangle()	~> Berfungsi untuk menggambar persegi panjang atas - kanan yang sederhana, tebal, atau filled pada suatu gambar.
+- cv2.rectangle(<sumber gambar>, <point 1>, <point 2>, <warna>, <ketebalan>)
+    - point 1	        -> Titik sudut persegi panjang.
+    - point 2	        -> Titik sudut persegi panjang yang berlawanan dengan point 1.
+    - color	        -> (r, g, b)
+
+- cv2.putText()	        ~> Berfungsi untuk menggambar string teks pada suatu gambar.
+- cv2.putText(<sumber gambar>, <teks [string]>, <posisi>, <jenis font>, <ukuran font>, <warna teks>, <ketebalan>)
+    - posisi	        -> Sudut kiri bawah string teks pada gambar.
+    - color		-> (r, g, b)
+

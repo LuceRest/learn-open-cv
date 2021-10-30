@@ -1,0 +1,23 @@
+- cv2.imread()		                        ~> Berfungsi untuk membaca suatu gambar input.
+- cv2.imread("<lokasi gambar>")
+
+- cv2.imshow()		                        ~> Berfungsi untuk menampilkan gambar yg telah dibaca dengan imread().
+- cv2.imshow("<nama window", <gambar yg ingin ditampilkan>)
+
+- cv2.waitKey()		                        ~> Berfungsi untuk memberi delay terhadap penampilan gambar.
+- cv2.waitKey(<lama delay [ms]>)
+- cv2.waitKey(0)				~> Berfungsi untuk menampilkan gambar selama user tidak menutupnya.
+
+- cv2.VideoCapture()	                    	~> Berfungsi untuk membaca suatu video input atau urutan gambar input.
+- cv2.VideoCapture("<lokasi video>")
+- cv2.VideoCapture(0)	                    	~> Berfungsi untuk membaca webcam.
+
+- cv2.VideoCapture().read()	                ~> Berfungsi untuk membaca suatu video perframe (mereturn boolean & gambar perframe).
+- <nama variable boolean>, <nama variable perframe> = cv2.VideoCapture().read()
+
+- cv2.VideoCapture().set(3, <lebar frame>)	~> Berfunsi untuk mengatur lebar frame.
+
+- cv2.VideoCapture().set(4, <tinggi frame>)	~> Berfunsi untuk mengatur tinggi frame.
+
+- cv2.resize()		                        ~> Berfungsi untuk mengatur ukuran gambar yg telah dibaca.
+- cv2.resize(<gambar yg ingin diresize>, (<lebar frame>, <tinggi frame>))
